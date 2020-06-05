@@ -1,0 +1,32 @@
+[
+  {
+    "model": "films.film",
+    "pk": 1,
+    "fields": {
+      "title": "The Fellowship of the Ring",
+      "duration": 3.42,
+      "year": 2001,
+      "director": "Peter Jackson"
+    }
+  },
+  {
+    "model": "films.film",
+    "pk": 2,
+    "fields": {
+      "title": "The Two Towers",
+      "duration": 3.48,
+      "year": 2002,
+      "director": "Peter Jackson"
+    }
+  },
+  {
+    "model": "films.film",
+    "pk": 3,
+    "fields": {
+      "title": "The Return of the King",
+      "duration": 4.20,
+      "year": 2003,
+      "director": "Peter Jackson"
+    }
+  }
+  ]

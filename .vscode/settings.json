@@ -1,0 +1,10 @@
+{
+  "python.pythonPath": "//Users/gabriel/.local/share/virtualenvs/final-project-Yup7CCdB/bin/python",
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#33f82c",
+    "titleBar.activeBackground": "#33f82c",
+    "titleBar.inactiveBackground": "#33f82c",
+  },
+  "window.title": "Back-End",
+}
