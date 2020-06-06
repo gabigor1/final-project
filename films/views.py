@@ -1,3 +1,6 @@
+from django.shortcuts import render
+
+# Create your views here.
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -21,8 +24,7 @@ class FilmDetailView(APIView):
         except Film.DoesNotExist:
             raise NotFound()
 
-    def get(self, request):
-      film = self.get_film(pk)
-      serialized_film = FilmSerializer(film)
-      return Response(serialized_film.data)
-
+    def get(self, _request, pk):
+        film = self.get_film(pk)
+        serialized_film = FilmSerializer(film)
+        return Response(serialized_film.data, status=status.HTTP_200_OK)
