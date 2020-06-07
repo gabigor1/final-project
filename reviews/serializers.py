@@ -2,7 +2,6 @@ from rest_framework import serializers
 from django.contrib.auth import get_user_model
 
 from .models import Review
-from films.serializers import FilmSerializer
 User = get_user_model()
 
 class ReviewSerializer(serializers.ModelSerializer):
@@ -20,4 +19,3 @@ class UserSerializer(serializers.ModelSerializer):
 
 class PopulatedReviewSerializer(ReviewSerializer):
     owner = UserSerializer()
-    film = FilmSerializer()
