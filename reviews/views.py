@@ -5,15 +5,21 @@ from rest_framework.exceptions import NotFound, PermissionDenied
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from .models import Review
-from .serializers import PopulatedReviewSerializer, PopulatedReviewSerializer
+from .serializers import ReviewSerializer, PopulatedReviewSerializer
 
 class ReviewListView(APIView):
 
     permission_classes = (IsAuthenticatedOrReadOnly,)
 
+    def get(self, _request):
+        reviews = Review.objects.all()
+        serialized_reviews = PopulatedReviewSerializer(reviews, many=True)
+        return Response(serialized_reviews.data, status=status.HTTP_200_OK)
+
+
     def post(self, request):
         request.data['owner'] = request.user.id
-        created_review = PopulatedReviewSerializer(data=request.data)
+        created_review = ReviewSerializer(data=request.data)
         if created_review.is_valid():
             created_review.save()
             return Response(created_review.data, status=status.HTTP_201_CREATED)
