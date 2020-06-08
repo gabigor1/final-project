@@ -1,5 +1,6 @@
 import React from 'react'
 import { getSingleFilm } from '../lib/api'
+import FilmReview from './FilmReview'
 
 class FilmShow extends React.Component {
   state = { 
@@ -12,9 +13,7 @@ class FilmShow extends React.Component {
         id: null,
         username: null
       },
-      reviews: {
-        
-      }
+      reviews: null
     } 
   }
 
@@ -24,16 +23,21 @@ class FilmShow extends React.Component {
       const filmId = this.props.match.params.id
       console.log(filmId)
       const res = await getSingleFilm(filmId)
-      this.setState({ film: res.data })
+      console.log(res.data.reviews)
+      this.setState({ film: res.data, reviews: res.data.reviews })
     } catch (err) {
       console.log(err)
     }
   }
 
   render(){
+    if (!this.state.reviews) return null
     const { film } = this.state
+    const { reviews } = this.state
     console.log(film)
-    console.log(film.reviews)
+    console.log(reviews.map(review => {
+      return review.text
+    }))
     return (
       <section className="show-section">
         <div className="container">
@@ -57,7 +61,9 @@ class FilmShow extends React.Component {
           </div>
         </div>
         <div className="reviews">
-          {/* <p>{film.reviews.text}</p> */}
+          {reviews.map(review => (
+            <FilmReview key={review.id} {...review} />
+          ))}
         </div>
       </section>
     )
