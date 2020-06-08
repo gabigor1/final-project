@@ -1,8 +1,10 @@
 import React from 'react'
 
+import FilmIndex from './components/films/FilmIndex'
+
 const App = () => {
   return (
-    <h1>Hello World</h1>
+    <FilmIndex/>
   )
 }
 

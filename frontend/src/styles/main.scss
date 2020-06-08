@@ -1,0 +1,11 @@
+@import '~bulma/bulma.sass';
+
+.card {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-content {
+  border-top: 1px solid blue;
+  background-color: coral;
+}
