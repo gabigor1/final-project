@@ -11,3 +11,38 @@
   padding: 10px;
   color: black;
 }
+
+.film {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 1px solid blue;
+
+    .film-container {
+      background-color: salmon;
+
+    }
+}
+
+.show-section {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  border: 1px solid blue;
+  justify-content: space-between;
+    .container {
+      border: 2px solid yellow;
+      margin: 10px;
+    }
+
+    .reviews {
+      display: flex;
+      border: 2px solid red;
+      flex-grow: 1;
+      margin: 10px;
+      padding: 100px;
+    }
+}

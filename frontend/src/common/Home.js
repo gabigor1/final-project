@@ -9,9 +9,6 @@ const Home = () => (
         </p>
       </div>
     </div>
-    <div className="down">
-      <p>Hello</p>
-    </div>
   </section>
 )
 export default Home

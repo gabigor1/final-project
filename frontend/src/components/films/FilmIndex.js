@@ -22,7 +22,7 @@ class FilmsIndex extends React.Component {
         <div className="container">
           <div className="columns is-multiline">
             {this.state.films.map(film => (
-              <FilmCard key={film._id} {...film}/>
+              <FilmCard key={film.id} {...film}/>
             ))}
           </div>
         </div>
