@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAllFilms } from '../lib/api'
+import { getAllFilms } from '../../lib/api'
 
 import FilmCard from './FilmCard'
 

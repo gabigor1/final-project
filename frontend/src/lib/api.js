@@ -9,3 +9,7 @@ export const getAllFilms = () => {
 export const getSingleFilm = id => {
   return axios.get(`${baseUrl}/films/${id}`)
 }
+
+export const loginUser = formData => {
+  return axios.post(`${baseUrl}/login/`, formData)
+}

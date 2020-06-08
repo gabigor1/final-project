@@ -1,5 +1,5 @@
 import React from 'react'
-import { getSingleFilm } from '../lib/api'
+import { getSingleFilm } from '../../lib/api'
 import FilmReview from './FilmReview'
 
 class FilmShow extends React.Component {
