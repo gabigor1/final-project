@@ -38,12 +38,45 @@
       margin: 10px;
     }
 
+    .write-review {
+      display: flex;
+      flex-direction: column;
+      margin: 50px;
+
+      textarea {
+        display: flex;
+        justify-items: center;
+        overflow: auto;
+        height: 32px;
+        min-height: 32px;
+        width: 44vw;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #6A6767;
+        border: none;
+        color: #E5E5E5;
+        font-size: medium;
+        font-weight: 500;
+        resize: none;
+        animation: collapse .35s ease-in-out;
+      }
+
+      textarea::placeholder {
+        color: #A9A4A4;
+      }
+
+      textarea:focus {
+        height: 150px;
+        animation: expand .35s 1 0s ease-in-out;
+      }
+    }
+
     .reviews {
       display: flex;
       flex-direction: column;
       border: 2px solid red;
       flex-grow: 1;
       margin: 10px;
-      padding: 100px;
+      padding: 50px;
     }
 }

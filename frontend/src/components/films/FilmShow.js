@@ -60,6 +60,11 @@ class FilmShow extends React.Component {
             </div>
           </div>
         </div>
+        <div className="write-review">
+          <textarea>
+            
+          </textarea>
+        </div>
         <div className="reviews">
           {reviews.map(review => (
             <FilmReview key={review.id} {...review} />

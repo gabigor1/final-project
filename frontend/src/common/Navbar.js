@@ -12,6 +12,8 @@ class Navbar extends React.Component {
               Home
             </Link>
             <Link to="/films" className="navbar-item">Films Index</Link>
+          </div>
+          <div className="navbar-end">
             <Link to="/login" className="navbar-item">Log In</Link>
           </div>
         </div>
