@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CheeseForm = ({ formData, handleChange, handleSubmit, buttonText }) => (
+const FilmForm = ({ formData, handleChange, handleMultiChange, handleSubmit, buttonText }) => (
   <div className="columns">
     <form onSubmit={handleSubmit} className="column is-half is-offset-one-quarter box">
       <div className="field">
@@ -54,9 +54,9 @@ const CheeseForm = ({ formData, handleChange, handleSubmit, buttonText }) => (
       <div className="field">
         <label className="label">Genres</label>
         <div className="control">
-          <select className="input" onChange={handleChange}
+          <select  onChange={handleMultiChange}
             value={formData.genres}
-            name="genres">
+            name="genres" multiple>
             <option value="1">Action</option>
             <option value="2">Adventure</option>
             <option value="3">Comedy</option>
@@ -77,4 +77,4 @@ const CheeseForm = ({ formData, handleChange, handleSubmit, buttonText }) => (
   </div>
 )
 
-export default CheeseForm
+export default FilmForm
