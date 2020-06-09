@@ -1,10 +1,11 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import Navbar from './common/Navbar'
-import Home from './common/Home'
+import Navbar from './components/common/Navbar'
+import Home from './components/common/Home'
 import FilmIndex from './components/films/FilmIndex'
 import FilmShow from './components/films/FilmShow'
+import FilmNew from './components/films/FilmNew'
 import Login from './components/auth/Login'
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar/>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/films/new" component={FilmNew} />
         <Route path="/films/:id" component={FilmShow} />
         <Route path="/films" component={FilmIndex} />
         <Route path="/login" component={Login} />

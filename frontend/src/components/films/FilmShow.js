@@ -1,6 +1,7 @@
 import React from 'react'
 import { getSingleFilm } from '../../lib/api'
 import FilmReview from './FilmReview'
+import FilmGenre from './FilmGenre'
 
 class FilmShow extends React.Component {
   state = { 
@@ -13,7 +14,8 @@ class FilmShow extends React.Component {
         id: null,
         username: null
       },
-      reviews: null
+      reviews: null,
+      genres: null
     } 
   }
 
@@ -23,8 +25,8 @@ class FilmShow extends React.Component {
       const filmId = this.props.match.params.id
       console.log(filmId)
       const res = await getSingleFilm(filmId)
-      console.log(res.data.reviews)
-      this.setState({ film: res.data, reviews: res.data.reviews })
+      console.log(res.data.genres)
+      this.setState({ film: res.data, reviews: res.data.reviews, genres: res.data.genres })
     } catch (err) {
       console.log(err)
     }
@@ -34,10 +36,13 @@ class FilmShow extends React.Component {
     if (!this.state.reviews) return null
     const { film } = this.state
     const { reviews } = this.state
-    console.log(film)
-    console.log(reviews.map(review => {
-      return review.text
-    }))
+    const { genres } = this.state
+    // console.log(genres.map(genre => {
+    //   return genre.name
+    // }))
+    // console.log(reviews.map(review => {
+    //   return review.text
+    // }))
     return (
       <section className="show-section">
         <div className="container">
@@ -48,7 +53,7 @@ class FilmShow extends React.Component {
               </figure>
             </div>
             <div className="column is-half">
-              <h4 className="title is-6">{film.title}</h4>
+              <h4 className="title is-6">Title: {film.title}</h4>
               <hr />
               <h4 className="title is-6">Duration: {film.duration} Hours</h4>
               <hr />
@@ -56,13 +61,19 @@ class FilmShow extends React.Component {
               <hr />
               <h4 className="title is-6">Director: {film.director}</h4>
               <hr />
+              <h4 className="title is-6">Genres: {genres.map(review => (
+                <FilmGenre key={review.id} {...review} />
+              ))}
+              </h4>
+              <hr />
               <h4 className="title is-6">Added By: {film.owner.username}</h4>
+              <hr />
             </div>
           </div>
         </div>
         <div className="write-review">
           <textarea>
-            
+
           </textarea>
         </div>
         <div className="reviews">
