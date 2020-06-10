@@ -2,6 +2,7 @@ import React from 'react'
 import { getSingleFilm } from '../../lib/api'
 import FilmReview from './FilmReview'
 import FilmGenre from './FilmGenre'
+import ReviewPost from './ReviewPost'
 
 class FilmShow extends React.Component {
   state = { 
@@ -71,10 +72,8 @@ class FilmShow extends React.Component {
             </div>
           </div>
         </div>
-        <div className="write-review">
-          <textarea>
-
-          </textarea>
+        <div>
+          <ReviewPost/>
         </div>
         <div className="reviews">
           {reviews.map(review => (

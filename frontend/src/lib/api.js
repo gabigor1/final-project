@@ -31,3 +31,9 @@ export const deleteFilm = id => {
 export const loginUser = formData => {
   return axios.post(`${baseUrl}/login/`, formData)
 }
+
+// ! Creating a review 
+
+export const postReview = (formData, id) => {
+  return axios.post(`${baseUrl}/films/${id}`, formData, withHeaders())
+}
