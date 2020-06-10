@@ -34,6 +34,6 @@ export const loginUser = formData => {
 
 // ! Creating a review 
 
-export const postReview = (formData, id) => {
-  return axios.post(`${baseUrl}/films/${id}`, formData, withHeaders())
+export const postReview = formData => {
+  return axios.post(`${baseUrl}/reviews/`, formData, withHeaders())
 }

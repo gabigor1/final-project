@@ -22,7 +22,14 @@ class FilmShow extends React.Component {
 
   async componentDidMount() {
     try {
+      this.loadData()
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
+  loadData = async () => {
+    try {
       const filmId = this.props.match.params.id
       console.log(filmId)
       const res = await getSingleFilm(filmId)
@@ -38,6 +45,7 @@ class FilmShow extends React.Component {
     const { film } = this.state
     const { reviews } = this.state
     const { genres } = this.state
+    console.log(this.props.match.params)
     // console.log(genres.map(genre => {
     //   return genre.name
     // }))
@@ -73,7 +81,10 @@ class FilmShow extends React.Component {
           </div>
         </div>
         <div>
-          <ReviewPost/>
+          <ReviewPost
+            filmId={this.props.match.params.id}
+            loadData={this.loadData}
+          />
         </div>
         <div className="reviews">
           {reviews.map(review => (

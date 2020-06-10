@@ -1,14 +1,17 @@
 import React from 'react'
+import { postReview } from '../../lib/api'
 
 class ReviewPost extends React.Component {
   state = {
     formData: {
       text: '',
-      rating: null
+      rating: '',
+      film: this.props.filmId
     }
   }
 
   handleChange = event => {
+    console.log(event.target.value)
     const formData = { ...this.state.formData, [event.target.name]: event.target.value }
     this.setState({ formData })
   }
@@ -17,7 +20,11 @@ class ReviewPost extends React.Component {
     event.preventDefault()
 
     try {
+      const res = await postReview(this.state.formData, this.props)
+      console.log(res.data.id)
       console.log('Review send')
+      this.setState({ formData: { ...this.state.form, text: '' } })
+      this.props.loadData()
     } catch (err) {
       console.log(err)
     }
@@ -25,18 +32,20 @@ class ReviewPost extends React.Component {
 
 
   render() {
-    console.log(this.props.currentUser)
+    console.log(this.props.filmId)
     return (
       <section className="post-container">
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div className="top-section">
-            <h4>Rating</h4>
             <h4>{this.props.user}</h4>
+            <label>Rating: 
+              <input onChange={this.handleChange}name ="rating" type="number" min="1" max="5"></input>
+            </label>
             <div className="field">
               <textarea
                 className="textarea"
                 name="text"
-                // value={this.state.formData.text}
+                value={this.state.formData.text}
                 placeholder="Make your review"
                 onChange={this.handleChange}
               />
