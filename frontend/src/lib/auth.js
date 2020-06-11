@@ -18,8 +18,9 @@ export const getPayload = () => {
   return JSON.parse(window.atob(parts[1]))
 }
 
-export const getUserId = () => {
-  return getPayload().sub
+export const isOwner = id => {
+  const userId = getPayload().sub
+  return userId === id
 }
 
 export const isAuthenticated = () => {

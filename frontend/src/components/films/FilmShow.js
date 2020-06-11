@@ -1,5 +1,6 @@
 import React from 'react'
-import { getSingleFilm } from '../../lib/api'
+import { getSingleFilm, deleteFilm } from '../../lib/api'
+import { isOwner } from '../../lib/auth'
 import FilmReview from './FilmReview'
 import FilmGenre from './FilmGenre'
 import ReviewPost from './ReviewPost'
@@ -40,6 +41,16 @@ class FilmShow extends React.Component {
     }
   }
 
+  handleDelete = async () => {
+    try {
+      const filmId = this.props.match.params.id
+      await deleteFilm(filmId)
+      this.props.history.push('/films')
+    } catch (err) {
+      console.log(err.response)
+    }
+  }
+
   render(){
     if (!this.state.reviews) return null
     const { film } = this.state
@@ -77,6 +88,7 @@ class FilmShow extends React.Component {
               <hr />
               <h4 className="title is-6">Added By: {film.owner.username}</h4>
               <hr />
+              {isOwner(film.owner.id) && <button onClick={this.handleDelete} className="button is-danger">Delete</button>}
             </div>
           </div>
           <hr />
