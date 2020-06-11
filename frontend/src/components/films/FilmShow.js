@@ -79,8 +79,9 @@ class FilmShow extends React.Component {
               <hr />
             </div>
           </div>
+          <hr />
         </div>
-        <div>
+        <div className="post">
           <ReviewPost
             filmId={this.props.match.params.id}
             loadData={this.loadData}
