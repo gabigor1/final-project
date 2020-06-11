@@ -1,6 +1,7 @@
 import React from 'react'
+import { isOwner } from '../../lib/auth'
 
-const FilmReview = ({ owner, text, rating }) => (
+const FilmReview = ({ owner, text, rating, id, handleDeleteReview }) => (
   <div className="review">
     <div className="review-container">
       <div className="review-header">
@@ -10,6 +11,7 @@ const FilmReview = ({ owner, text, rating }) => (
       <div className="review-content">
         <p> {text} </p>
       </div>
+      {isOwner(owner.id) && <button onClick={handleDeleteReview} value={id}>Deleted</button>}
     </div>
   </div>
 )

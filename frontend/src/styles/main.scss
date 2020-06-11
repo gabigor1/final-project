@@ -1,5 +1,9 @@
 @import '~bulma/bulma.sass';
 
+.hero-body {
+  background-color: #CADD95;
+}
+
 .card {
 	display: flex;
 	flex-direction: column;
@@ -76,7 +80,6 @@
           font-size: medium;
           font-weight: 500;
           resize: none;
-          animation: collapse .35s ease-in-out;
         }
   
         textarea::placeholder {

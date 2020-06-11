@@ -1,5 +1,5 @@
 import React from 'react'
-import { getSingleFilm, deleteFilm } from '../../lib/api'
+import { getSingleFilm, deleteFilm, deleteReview } from '../../lib/api'
 import { isOwner } from '../../lib/auth'
 import FilmReview from './FilmReview'
 import FilmGenre from './FilmGenre'
@@ -47,6 +47,16 @@ class FilmShow extends React.Component {
       const filmId = this.props.match.params.id
       await deleteFilm(filmId)
       this.props.history.push('/films')
+    } catch (err) {
+      console.log(err.response)
+    }
+  }
+
+  handleDeleteReview = async (e) => {
+    try {
+      console.log(e.target.value)
+      await deleteReview(e.target.value)
+      this.loadData()
     } catch (err) {
       console.log(err.response)
     }
@@ -102,7 +112,7 @@ class FilmShow extends React.Component {
         </div>
         <div className="reviews">
           {reviews.map(review => (
-            <FilmReview key={review.id} {...review} />
+            <FilmReview key={review.id} {...review} handleDeleteReview={this.handleDeleteReview} />
           ))}
         </div>
       </section>

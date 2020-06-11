@@ -32,8 +32,18 @@ export const loginUser = formData => {
   return axios.post(`${baseUrl}/login/`, formData)
 }
 
+export const registerUser = formData => {
+  console.log(formData)
+  return axios.post(`${baseUrl}/register/`, formData)
+}
+
 // ! Creating a review 
 
 export const postReview = formData => {
+  console.log(formData)
   return axios.post(`${baseUrl}/reviews/`, formData, withHeaders())
+}
+
+export const deleteReview = id => {
+  return axios.delete(`${baseUrl}/reviews/${id}`, withHeaders())
 }
