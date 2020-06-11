@@ -6,6 +6,7 @@
       "title": "The Fellowship of the Ring",
       "duration": 3.42,
       "year": 2001,
+      "image": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_.jpg",
       "director": "Peter Jackson",
       "owner": 1
     }
@@ -17,6 +18,7 @@
       "title": "The Two Towers",
       "duration": 3.48,
       "year": 2002,
+      "image": "https://upload.wikimedia.org/wikipedia/en/d/d0/Lord_of_the_Rings_-_The_Two_Towers_%282002%29.jpg",
       "director": "Peter Jackson",
       "owner": 1
     }
@@ -28,7 +30,92 @@
       "title": "The Return of the King",
       "duration": 4.20,
       "year": 2003,
+      "image": "https://upload.wikimedia.org/wikipedia/en/b/be/The_Lord_of_the_Rings_-_The_Return_of_the_King_%282003%29.jpg",
       "director": "Peter Jackson",
+      "owner": 1
+    }
+  },
+  {
+    "model": "films.film",
+    "pk": 4,
+    "fields": {
+      "title": "Titanic",
+      "duration": 3.12,
+      "year": 1997,
+      "image": "https://upload.wikimedia.org/wikipedia/en/1/19/Titanic_%28Official_Film_Poster%29.png",
+      "director": "James Cameron",
+      "owner": 1
+    }
+  },
+  {
+    "model": "films.film",
+    "pk": 5,
+    "fields": {
+      "title": "The Godfather",
+      "duration": 2.58,
+      "year": 1972,
+      "image": "https://static.tvtropes.org/pmwiki/pub/images/the-godfather-poster-c12172921.jpg",
+      "director": "Francis Ford Coppola",
+      "owner": 1
+    }
+  },
+  {
+    "model": "films.film",
+    "pk": 6,
+    "fields": {
+      "title": "Pulp Fiction",
+      "duration": 2.58,
+      "year": 1994,
+      "image": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+      "director": "Quentin Tarantino",
+      "owner": 1
+    }
+  },
+  {
+    "model": "films.film",
+    "pk": 7,
+    "fields": {
+      "title": "Django Unchained",
+      "duration": 2.45,
+      "year": 2012,
+      "image": "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg",
+      "director": "Quentin Tarantino",
+      "owner": 1
+    }
+  },
+  {
+    "model": "films.film",
+    "pk": 8,
+    "fields": {
+      "title": "Shutter Island",
+      "duration": 2.19,
+      "year": 2010,
+      "image": "https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "director": "Martin Scorsese",
+      "owner": 1
+    }
+  },
+  {
+    "model": "films.film",
+    "pk": 9,
+    "fields": {
+      "title": "The Avengers",
+      "duration": 2.24,
+      "year": 2012,
+      "image": "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Avengers_%282012_film%29_poster.jpg",
+      "director": "Joss Whedon",
+      "owner": 1
+    }
+  },
+  {
+    "model": "films.film",
+    "pk": 10,
+    "fields": {
+      "title": "The Italian Job",
+      "duration": 1.51,
+      "year": 2003,
+      "image": "https://upload.wikimedia.org/wikipedia/en/d/db/Italianjob.jpg",
+      "director": "F. Gary Gray",
       "owner": 1
     }
   }

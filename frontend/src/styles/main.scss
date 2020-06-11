@@ -10,6 +10,7 @@
   background-color: rgb(0, 109, 128);
   padding: 10px;
   color: black;
+  text-align: center;
 }
 
 .film {
@@ -38,6 +39,15 @@
   justify-content: space-between;
     .container {
       margin: 10px;
+    }
+
+    .column {
+      margin-right: 80px
+    }
+
+    .image img {
+    width: 63%;
+    margin-left: 100px;
     }
 
     .write-review {

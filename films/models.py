@@ -7,6 +7,7 @@ class Film(models.Model):
     title = models.CharField(max_length=40, unique=True)
     duration = models.FloatField()
     year = models.IntegerField()
+    image = models.CharField(max_length=300)
     director = models.CharField(max_length=50)
     genres = models.ManyToManyField(
         'genres.Genre',

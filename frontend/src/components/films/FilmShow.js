@@ -12,6 +12,7 @@ class FilmShow extends React.Component {
       duration: null,
       year: null,
       director: null,
+      image: null,
       owner: {
         id: null,
         username: null
@@ -67,9 +68,9 @@ class FilmShow extends React.Component {
       <section className="show-section">
         <div className="container">
           <div className="columns">
-            <div className="column is-half">
+            <div className="column">
               <figure className="image">
-                <img src="" alt="Lord" />
+                <img src={film.image} alt={film.title}/>
               </figure>
             </div>
             <div className="column is-half">
