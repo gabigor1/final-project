@@ -1,5 +1,6 @@
 import React from 'react'
 import { postReview } from '../../lib/api'
+import StarRating from '../common/StarRating'
 
 class ReviewPost extends React.Component {
   state = {
@@ -33,14 +34,18 @@ class ReviewPost extends React.Component {
 
   render() {
     console.log(this.props.filmId)
+    console.log(this.state.formData.rating)
     return (
       <section className="post-container">
         <form onSubmit={this.handleSubmit}>
           <div className="top-section">
             <h4>{this.props.user}</h4>
-            <label>Rating: 
+            <StarRating 
+              handleChange={this.handleChange} name="rating"
+              rating={this.state.formData.rating}/>
+            {/* <label>Rating: 
               <input onChange={this.handleChange}name ="rating" type="number" min="1" max="5"></input>
-            </label>
+            </label> */}
             <div className="field">
               <textarea
                 className="textarea"

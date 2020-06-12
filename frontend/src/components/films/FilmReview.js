@@ -1,11 +1,14 @@
 import React from 'react'
 import { isOwner } from '../../lib/auth'
 
+import StarRating from '../common/StarRating'
+
 const FilmReview = ({ owner, text, rating, id, handleDeleteReview }) => (
   <div className="review">
     <div className="review-container">
       <div className="review-header">
-        <span>Rating: {rating}/5</span>
+        <StarRating rating={rating} />
+        {/* <span>Rating: {rating}/5</span> */}
         <h4>User: {owner.username}</h4>
       </div>
       <div className="review-content">
