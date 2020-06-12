@@ -11,7 +11,7 @@ const FilmReview = ({ owner, text, rating, id, handleDeleteReview }) => (
       <div className="review-content">
         <p> {text} </p>
       </div>
-      {isOwner(owner.id) && <button onClick={handleDeleteReview} value={id}>Deleted</button>}
+      {isOwner(owner.id) && <button className="button is-danger"onClick={handleDeleteReview} value={id}>Deleted</button>}
     </div>
   </div>
 )
