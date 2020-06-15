@@ -38,6 +38,18 @@ const FilmForm = ({ formData, handleChange, handleMultiChange, handleSubmit, but
             value={formData.year}
           />
         </div>
+        <div className="field">
+          <label className="label">Image</label>
+          <div className="control">
+            <input 
+              className="input"
+              placeholder="Image Url"
+              name="image"
+              onChange={handleChange}
+              value={formData.image}
+            />
+          </div>
+        </div>
       </div>
       <div className="field">
         <label className="label">Director</label>
