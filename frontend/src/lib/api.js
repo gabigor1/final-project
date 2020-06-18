@@ -11,11 +11,11 @@ const withHeaders = () => {
 // ! ------ Getting the films
 
 export const getAllFilms = () => {
-  return axios.get(`${baseUrl}/films`)
+  return axios.get(`${baseUrl}/films/`)
 }
 
 export const getSingleFilm = id => {
-  return axios.get(`${baseUrl}/films/${id}`)
+  return axios.get(`${baseUrl}/films/${id}/`)
 }
 
 // ? ------ Creating and deleting films
@@ -25,7 +25,7 @@ export const postFilm = formData => {
 }
 
 export const deleteFilm = id => {
-  return axios.delete(`${baseUrl}/films/${id}`, withHeaders())
+  return axios.delete(`${baseUrl}/films/${id}/`, withHeaders())
 }
 
 export const loginUser = formData => {
@@ -45,5 +45,5 @@ export const postReview = formData => {
 }
 
 export const deleteReview = id => {
-  return axios.delete(`${baseUrl}/reviews/${id}`, withHeaders())
+  return axios.delete(`${baseUrl}/reviews/${id}/`, withHeaders())
 }

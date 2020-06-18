@@ -13,6 +13,7 @@ djangorestframework = "*"
 pylint = "*"
 autopep8 = "*"
 pyjwt = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.7"
