@@ -40,6 +40,10 @@ Film-Space is a RESTful full-stack film review app allowing users to add films a
 
 ## Process
 
+Before starting to code, I did a skecth using Figma to have an idea on how the app should look.
+
+![wireframe](assets/Wireframe.png)
+
 The starting point was to create a database using Django and Python. First, I made a diagram of the database to visualize the structure and the relations between the models.
 
 ![database](assets/database.png)
