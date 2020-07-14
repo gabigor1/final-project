@@ -14,9 +14,9 @@ Timeframe: 7 days
 - [Overview](#overview)
 - [Process](#process)
 - [Technologies](#technologies)
-- [Win](#win)
+- [Wins](#wins)
 - [Challenges](#challenges)
-- [Learning](#learnings)
+- [Lessons Learned](#learnings)
  
 ## Overview
  
@@ -48,11 +48,11 @@ The starting point was to create a database using Django and Python. First, I ma
  
 ![database](assets/database.png)
  
-After, using the diagram as an example I started to build my backend using Django Rest Framework with python. I made the models of the films, reviews, users and genres,
+After, using the diagram as an example I started to build my backend using Django Rest Framework with python. I made the models of the films, reviews, users and genres.
  
-After I made the relations between the models to build the database. Then I create some films, users, and reviews to check if I receive correctly the data.
+After I made the relations between the models to build the database. Then I created some films, users, and reviews to check if I receive correctly the data.
  
-Starting with the frontend I made login and register user pages to create users. After I build an index page to receive all the films that I have in my database.
+Starting with the frontend I made login and register user pages to create users. After I built an index page to receive all the films that I have in my database.
  
 ![main](assets/Film-Space.png)
  
@@ -60,11 +60,11 @@ Then I made a form page to add a film to the database if you are a registered us
  
 ![filmform](assets/Filmform.png)
  
-Finally, I create an info page for all the films, which have data of the film (name, author, release date, and genres) and users can post their ratings with comments. I used a third-party library (react-star-rating) to create a rating system. Also, everyone can see all the comments.
+Finally, I created an info page for all the films, which have data of the film (name, author, release date, and genres) and users can post their ratings with comments. I used a third-party library (react-star-rating) to create a rating system. Also, everyone can see all the comments.
  
 ![filminfo](assets/Filminfo.png)
  
-## Win
+## Wins
 My biggest win in this project was to create the star rating systems in the frontend and send the data to the backend. It took my time to understand how to use react-star-rating. I’m so proud of the results.
  
  
@@ -100,8 +100,8 @@ export default StarRating
  
 ## Challenges
  
-This was the fourth project for the course. In this last project, I have to create myself a full-stack app using another programming language (Python) with Django for the BackEnd. First, my first problem was to create a database structure, that focuses on the relations between users/films, reviews/films, and finally genres/films. Secondly, I got problems linking the backend (Python) with the frontend (React.js), I solved this problem by renaming the data in the frontend.
-Finally, it was tricky to make a rating system for the films, I use react-star-rating and create a function to give each star a value to rate the film.
+This was the fourth project for the course. In this last project, I had to create myself a full-stack app using another programming language (Python) with Django for the BackEnd. First, my first problem was to create a database structure, that focuses on the relations between users/films, reviews/films, and finally genres/films. Secondly, I got problems linking the backend (Python) with the frontend (React.js), I solved this problem by renaming the data in the frontend.
+Finally, it was tricky to make a rating system for the films, I used react-star-rating and created a function to give each star a value to rate the film.
  
 ## Learnings
  
