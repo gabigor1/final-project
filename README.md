@@ -100,7 +100,7 @@ export default StarRating
  
 ## Challenges
  
-This was the fourth project for the course. In this last project, I had to create a full-stack app myself using another programming language (Python) with Django for the BackEnd. First, my first problem was to create a database structure, that focused on the relations between users/films, reviews/films, and finally genres/films. Secondly, I experienced problems linking the BackEnd (Python) with the FrontEnd (React.js), I solved this problem by renaming the data in the frontend.
+This was the fourth project for the course. In this last project, I had to create a full-stack app myself using another programming language (Python) with Django for the BackEnd. My first problem was to create a database structure, that focused on the relations between users/films, reviews/films, and finally genres/films. Secondly, I experienced problems linking the BackEnd (Python) with the FrontEnd (React.js), I solved this problem by renaming the data in the FrontEnd.
 Finally, it was tricky to make a rating system for the films, I used react-star-rating and created a function to give each star a value to rate the film.
  
 ## Learnings
